@@ -1,7 +1,6 @@
 // YOU MUST USE BEM HERE
 // IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE 
 // Example: input, button, card ...
-@use "colors.scss";
 
 @font-face {
     font-family: "finn-default";
@@ -13,12 +12,44 @@
     src: url("https://assets.finn.no/pkg/@warp-ds/fonts/v1/FINNTypeStrippet-Medium.woff2");
 }
 
+// Colors go here
+$finnBlue: #0063fb;
+$finnDimBlue: #f0f8fe;
+$finnTextBlue: #1d72db;
+
+$finnGrey: #f7f7f7;
+
 body {
     font-family: 'finn-default', sans-serif;
     margin: 0 auto;
 
     h1, h2, h3, h4, h5, h6 {
         font-family: "finn-medium", "finn-default" sans-serif;
+    }
+
+    .index-nav {
+        background-color: $finnGrey;
+
+        .index-list {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+
+            .index-list__element {
+                padding: 10px;
+
+                .index-list__link {
+                    &--items, &--login {
+                        background-color: $finnDimBlue;
+                        border-radius: 7px;
+                    }
+
+                    &--items:hover, &--login:hover {
+                        background-color: turquoise;
+                    }
+                }
+            }  
+        }
     }
 
     main, section {
