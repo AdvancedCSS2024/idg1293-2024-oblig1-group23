@@ -15,45 +15,162 @@
 // Colors go here
 $finnBlue: #0063fb;
 $finnDimBlue: #f0f8fe;
-$finnTextBlue: #1d72db;
+$finnButtonBlue: #0063fb;
+$finnVectorBlue: #38bdf8;
 
-$finnGrey: #f7f7f7;
+$finnBackgroundGrey: #f7f7f7;
+$finnBorderGrey: #c3ccd9;
 
 body {
     font-family: 'finn-default', sans-serif;
     margin: 0 auto;
+}
 
-    h1, h2, h3, h4, h5, h6 {
-        font-family: "finn-medium", "finn-default" sans-serif;
+main, section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    padding-bottom: 20px;
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 23px;
+    font-weight: normal;
+    margin-left: 300px;
+}
+
+ul {
+    list-style-type: none;
+    position: -webkit-sticky;
+    position: sticky;
+    padding-top: 9px;
+    margin: -7px;
+    text-align: right; 
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+li {
+    display: inline-block;
+}
+
+li a {
+    float: right;
+    color: rgb(103, 103, 103);
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "finn-default", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 75%;
+}
+
+li:first-child {
+    float: left;
+    text-align: left;
+}
+
+.search {
+    float: none;
+
+    input {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 53%;
+        margin-left: 285px;
+        margin-top: 33px;
+        padding: 15px;
+        border-radius: 5px;
+
+        border: 1px solid $finnBorderGrey; 
     }
+}
 
-    .index-nav {
-        background-color: $finnGrey;
+hr {
+    opacity: calc(50%);
+}
 
-        .index-list {
-            display: flex;
-            flex-direction: column;
-            margin: 0 auto;
+.categories-section {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(10rem,2fr));
+    margin-top: 35px;
+    margin-left: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 19cap;
 
-            .index-list__element {
-                padding: 10px;
-
-                .index-list__link {
-                    &--items, &--login {
-                        background-color: $finnDimBlue;
-                        border-radius: 7px;
-                    }
-
-                    &--items:hover, &--login:hover {
-                        background-color: turquoise;
-                    }
-                }
-            }  
-        }
+    &__vector {
+        color: $finnVectorBlue;
     }
+}
 
-    main, section {
+.index-nav {
+    background-color: $finnGrey;
+
+    .index-list {
         display: flex;
-        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 0 auto;
+
+        .index-list__element {
+            padding: 10px;
+
+            .index-list__link {
+                &--items, &--login {
+                    background-color: $finnDimBlue;
+                    border-radius: 7px;
+                }
+
+                &--items:hover, &--login:hover {
+                    background-color: turquoise;
+                }
+            }
+        }  
     }
+}
+  
+.card {
+    border: solid 1px #7d7d7d4d;
+    border-radius: 10px;
+    padding: 40px;
+    width: 205px;
+    height: 205px;
+    margin: 10px;
+}
+  
+  
+.styled {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+}
+  
+.styled:hover {
+    background-color: rgba(0, 251, 255, 0.222);
+}
+  
+  
+.items-section {
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    
+}
+  
+.items-section p {
+    margin-left: 10px;
+    margin-bottom: 10px;
 }
