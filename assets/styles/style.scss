@@ -2,26 +2,24 @@
 
 @use "common.scss";
 
-body {
-    // For screenshot 1, the categories- and items- page.
-    .item-main {
-        flex-direction: column;
-        text-align: center;
+// For screenshot 1, the categories- and items- page.
+.item-main {
+    flex-direction: column;
+    text-align: center;
 
-        .item-main > section {
-            flex-direction: row;
-        }
+    .item-main > section {
+        flex-direction: row;
     }
+}
 
-    // For screenshot 2, the login page.
-    .login-main {
-        flex-direction: row-reverse;
-        justify-content: space-around;
-        text-align: center;
-        
-        .card {
-            max-width: 600px;
-            width: 40%;
-        }
+// For screenshot 2, the login page.
+.login-main {
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    text-align: center;
+    
+    .card {
+        max-width: 600px;
+        width: 40%;
     }
 }
