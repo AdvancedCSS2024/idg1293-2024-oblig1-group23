@@ -9,10 +9,16 @@ $finnButtonBlue: #0063fb;
 $finnCardBlue: #f1f9ff;
 $finnVectorBlue: #38bdf8;
 
-$finnBackgroundGrey: #f7f7f7;
-$finnBorderGrey: #c3ccd9;
+$finnBackgroundGray: #f7f7f7;
+$finnBorderGray: #c3ccd9;
+$finnDarkerInputGray: #c8c8c8;
+$finnInputGray: #e8e8e8;
 
 // For screenshot 1, the categories- and items-page.
+.item-header {
+
+}
+
 .item-main {
     flex-direction: column;
     text-align: center;
@@ -24,7 +30,7 @@ $finnBorderGrey: #c3ccd9;
 
 // For screenshot 2, the login page.
 .login-body {
-    background-color: $finnBackgroundGrey;
+    background-color: $finnBackgroundGray;
 }
 
 .login-main {
@@ -39,59 +45,152 @@ $finnBorderGrey: #c3ccd9;
 
     .card {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
         max-width: 540px;
-        width: 40%;
+        width: 60%;
+        min-height: 400px;
+        padding: 50px 10px 50px 10px;
     }
 
     .login-card {
         background-color: white;
+        box-shadow: 0 0 18px gray;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
 
         .finn-logo, .schibsted-logo {
+            max-width: 120px;
+            width: 40%;
+        }
+
+        .finn-logo {
             margin: 0 auto;
-            max-width: 100px;
-            width: 30%;
 
             &__img {
                 margin: inherit;
-                max-width: 200px;
+                max-width: 100px;
                 width: 50%;
+            }
+        }
+
+        .schibsted-logo {
+            margin: 0 auto;
+
+            &__img {
+                margin: inherit;
+                max-width: 120px;
+                width: 100%;
             }
         }
 
         h1, h2 {
             margin: 0 auto;
-            text-align: center;
-            max-width: 540px;
-            width: 80%;
+            text-align: left;
+            max-width: 400px;
+            width: 70%;
+            padding: 10px;
         }
 
         &__form {
+            box-shadow: none;
             display: flex;
             flex-direction: column;
+            max-width: 520px;
+            width: 80%;
+
+            input, button {
+                margin: 5px auto;
+                max-width: 520px;
+                width: 80%;
+                border-radius: 5px;
+                font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+                padding: 10px;
+            }
 
             label {
                 color: gray;
                 font-size: x-small;
+                margin: 5px auto;
+                max-width: 440px;
+                width: 85%;
+                text-align: left;
+            }
+
+            .email-input, .password-input {
+                background-color: $finnInputGray;
+
+                &:hover {
+                    background-color: $finnDarkerInputGray;
+                    -webkit-tap-highlight-color: transparent;
+                }
+            }
+
+            &__remember-input {
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                margin: left;
+                max-width: 200px;
+                width: 60%;
+
+                input {
+                    max-width: 20px;
+                    width: 20%;
+                    padding: 0;
+                }
+
+                p {
+                    font-size: small;
+                    max-width: 120px;
+                    width: 60%;
+                    padding: 0;
+                }
+            }
+
+            &__login-button {
+                background-color: $finnButtonBlue;
+                color: white;
+
+                &:hover {
+                    background-color: mediumblue;
+                }
+            }
+
+            &__create_account-button {
+                background-color: white;
+                color: $finnButtonBlue;
+                border: none;
+
+                &:hover {
+                    background-color: $finnDimBlue;
+                    box-shadow: 0 1px 4px gray;
+                    border: 2px 0 gray;
+                }
             }
         }
     }
 
     .help-card {
         background-color: $finnCardBlue;
+        border: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
 
         .finn-smartphone {
             margin: 0 auto;
-            max-width: 100px;
-            width: 30%;
+            max-width: 160px;
+            width: 40%;
 
             &__img {
                 margin: inherit;
                 max-width: 200px;
                 width: 50%;
             }
+        }
+
+        p, a {
+            padding: 2px 4px 2px 4px;
         }
     }
 }
