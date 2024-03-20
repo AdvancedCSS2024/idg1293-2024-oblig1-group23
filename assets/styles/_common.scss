@@ -16,10 +16,13 @@
 $finnBlue: #0063fb;
 $finnDimBlue: #f0f8fe;
 $finnButtonBlue: #0063fb;
+$finnCardBlue: #f1f9ff;
 $finnVectorBlue: #38bdf8;
 
-$finnBackgroundGrey: #f7f7f7;
-$finnBorderGrey: #c3ccd9;
+$finnBackgroundGray: #f7f7f7;
+$finnBorderGray: #c3ccd9;
+$finnDarkerInputGray: #c8c8c8;
+$finnInputGray: #e8e8e8;
 
 body {
     font-family: 'finn-default', Arial, Helvetica, sans-serif;
@@ -42,9 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 23px;
     font-weight: normal;
-    margin-left: 300px;
 }
 
 header {
@@ -119,7 +120,7 @@ header {
         padding: 15px;
         border-radius: 5px;
 
-        border: 1px solid $finnBorderGrey; 
+        border: 1px solid $finnBorderGray; 
     }
 }
 
@@ -137,28 +138,39 @@ header {
     }
 }
 
-.index-nav {
-    background-color: $finnBorderGrey;
+.index-body {
+    margin: 0 auto;
+    
+    h1 {
+        text-align: center;
+    }
 
-    .index-list {
-        display: flex;
-        flex-direction: column;
-        margin: 0 auto;
+    .index-nav {
+        background-color: $finnBorderGray;
 
-        .index-list__element {
-            padding: 10px;
+        .index-list {
+            display: flex;
+            flex-direction: column;
 
-            .index-list__link {
-                &--items, &--login {
-                    background-color: $finnDimBlue;
-                    border-radius: 7px;
+            .index-list__element {
+                padding: 10px;
+
+                .index-list__link {
+                    &--items, &--login, &--demo {
+                        background-color: $finnButtonBlue;
+                        color: white;
+                        border-radius: 7px;
+
+                        &:hover {
+                            background-color: white;
+                            color: $finnButtonBlue;
+                            box-shadow: 0 1px 4px gray;
+                            border: 2px 0 gray;
+                        }
+                    }
                 }
-
-                &--items:hover, &--login:hover {
-                    background-color: turquoise;
-                }
-            }
-        }  
+            }  
+        }
     }
 }
   

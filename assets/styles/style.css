@@ -25,9 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 23px;
   font-weight: normal;
-  margin-left: 300px;
 }
 
 header {
@@ -104,23 +102,32 @@ header hr {
   color: #38bdf8;
 }
 
-.index-nav {
-  background-color: #c3ccd9;
-}
-.index-nav .index-list {
-  display: flex;
-  flex-direction: column;
+.index-body {
   margin: 0 auto;
 }
-.index-nav .index-list .index-list__element {
+.index-body h1 {
+  text-align: center;
+}
+.index-body .index-nav {
+  background-color: #c3ccd9;
+}
+.index-body .index-nav .index-list {
+  display: flex;
+  flex-direction: column;
+}
+.index-body .index-nav .index-list .index-list__element {
   padding: 10px;
 }
-.index-nav .index-list .index-list__element .index-list__link--items, .index-nav .index-list .index-list__element .index-list__link--login {
-  background-color: #f0f8fe;
+.index-body .index-nav .index-list .index-list__element .index-list__link--items, .index-body .index-nav .index-list .index-list__element .index-list__link--login, .index-body .index-nav .index-list .index-list__element .index-list__link--demo {
+  background-color: #0063fb;
+  color: white;
   border-radius: 7px;
 }
-.index-nav .index-list .index-list__element .index-list__link--items:hover, .index-nav .index-list .index-list__element .index-list__link--login:hover {
-  background-color: turquoise;
+.index-body .index-nav .index-list .index-list__element .index-list__link--items:hover, .index-body .index-nav .index-list .index-list__element .index-list__link--login:hover, .index-body .index-nav .index-list .index-list__element .index-list__link--demo:hover {
+  background-color: white;
+  color: #0063fb;
+  box-shadow: 0 1px 4px gray;
+  border: 2px 0 gray;
 }
 
 .card {
@@ -312,12 +319,144 @@ header hr {
   margin-left: -180px;
 }
 
-.login-main {
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  text-align: center;
+.login-body {
+  background-color: #f7f7f7;
 }
-.login-main .card {
-  max-width: 600px;
+
+.login-main {
+  text-align: center;
+  justify-content: space-around;
+}
+
+.login-section {
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 86%;
+}
+.login-section .card {
+  display: flex;
+  max-width: 540px;
+  width: 60%;
+  min-height: 400px;
+  padding: 50px 10px 50px 10px;
+}
+.login-section .login-card {
+  background-color: white;
+  box-shadow: 0 0 18px gray;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.login-section .login-card .finn-logo, .login-section .login-card .schibsted-logo {
+  max-width: 120px;
   width: 40%;
+}
+.login-section .login-card .finn-logo {
+  margin: 0 auto;
+}
+.login-section .login-card .finn-logo__img {
+  margin: inherit;
+  max-width: 100px;
+  width: 50%;
+}
+.login-section .login-card .schibsted-logo {
+  margin: 0 auto;
+}
+.login-section .login-card .schibsted-logo__img {
+  margin: inherit;
+  max-width: 120px;
+  width: 100%;
+}
+.login-section .login-card h1, .login-section .login-card h2 {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 400px;
+  width: 70%;
+  padding: 10px;
+}
+.login-section .login-card__form {
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  width: 80%;
+}
+.login-section .login-card__form input, .login-section .login-card__form button {
+  margin: 5px auto;
+  max-width: 520px;
+  width: 80%;
+  border-radius: 5px;
+  font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+.login-section .login-card__form label {
+  color: gray;
+  font-size: x-small;
+  margin: 5px auto;
+  max-width: 440px;
+  width: 85%;
+  text-align: left;
+}
+.login-section .login-card__form .email-input, .login-section .login-card__form .password-input {
+  background-color: #e8e8e8;
+}
+.login-section .login-card__form .email-input:hover, .login-section .login-card__form .password-input:hover {
+  background-color: #c8c8c8;
+  -webkit-tap-highlight-color: transparent;
+}
+.login-section .login-card__form__remember-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: left;
+  max-width: 200px;
+  width: 60%;
+}
+.login-section .login-card__form__remember-input input {
+  max-width: 20px;
+  width: 20%;
+  padding: 0;
+}
+.login-section .login-card__form__remember-input p {
+  font-size: small;
+  max-width: 120px;
+  width: 60%;
+  padding: 0;
+}
+.login-section .login-card__form__login-button {
+  background-color: #0063fb;
+  color: white;
+}
+.login-section .login-card__form__login-button:hover {
+  background-color: mediumblue;
+}
+.login-section .login-card__form__create_account-button {
+  background-color: white;
+  color: #0063fb;
+  border: none;
+}
+.login-section .login-card__form__create_account-button:hover {
+  background-color: #f0f8fe;
+  box-shadow: 0 1px 4px gray;
+  border: 2px 0 gray;
+}
+.login-section .help-card {
+  background-color: #f1f9ff;
+  border: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}
+.login-section .help-card .finn-smartphone {
+  margin: 0 auto;
+  max-width: 160px;
+  width: 40%;
+}
+.login-section .help-card .finn-smartphone__img {
+  margin: inherit;
+  max-width: 200px;
+  width: 50%;
+}
+.login-section .help-card p, .login-section .help-card a {
+  padding: 2px 4px 2px 4px;
 }/*# sourceMappingURL=style.css.map */
