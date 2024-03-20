@@ -165,13 +165,23 @@
 
         <h1>Logg inn</h1>
         <form class="login-card__form">
-          <input class="email-input" id="email-input" type="email">
+          <input class="email-input" id="email-input" type="email" placeholder="Skriv inn din e-postadresse *">
           <label for="email-input">*Nødvendig felt</label>
 
-          <input class="password-input" id="password-input" type="password">
+          <input class="password-input" id="password-input" type="password" placeholder="Vennligst oppgi passordet ditt *">
           <label for="password-input">*Nødvendig felt</label>
 
-          <button class="login-button"></button>
+          <button class="login-card__form__forgot-button">
+            <span class="sc-dlfnuX iDIjnW">Glemt passord?</span>
+          </button>
+          <div class="login-card__form__remember-input">
+            <input class="remember-input__checkbox" id="remember" type="checkbox"
+              data-indeterminate="false" value="checkedF" checked="">
+            <p>Hold meg innlogget</p>
+          </div>
+
+          <button class="login-card__form__login-button" type="button">Logg inn</button>
+          <button class="login-card__form__create_account-button" type="button">Opprette ny konto</button>
         </form>
       </div>
       <div class="card help-card">
@@ -189,6 +199,11 @@
           Problemer med innloggingen?
           <a href="https://hjelpesenter.finn.no/hc/no/sections/39454-Innlogging-og-passord">
             Her kan du finne hjelp
+          </a>
+        </p>
+        <p>
+          <a href="https://www.finn.no/">
+           Tilbake til Finn
           </a>
         </p>
       </div>
