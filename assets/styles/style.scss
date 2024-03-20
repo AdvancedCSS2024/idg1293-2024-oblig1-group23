@@ -4,7 +4,91 @@
 
 // For screenshot 1, the categories- and items-page.
 .item-header {
-    
+    max-width: 1900px;
+    width: 100%;
+
+    nav {
+        display: inline;
+        position: sticky;
+        max-width: 880px;
+        width: 80%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding-top: 9px;
+        margin: 0 auto;
+        max-width: 800px;
+        width: 96%;
+        text-align: right;
+    }
+
+    nav ul .finn-logo {
+        display: block;
+        margin-left: -80px;
+        max-width: 200px;
+        width: 14%;
+        text-align: left;
+        padding: 8px;
+    }
+    nav ul li {
+        display: flex;
+    }
+    nav ul li a {
+        color: rgb(103, 103, 103);
+        padding: 14px 35px;
+        text-decoration: none;
+        font-family: "finn-default", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 75%;
+    }
+    nav ul li:first-child {
+        text-align: left;
+    }
+    nav ul li:nth-child(2) {
+        text-align: left;
+        margin-left: 20px;
+        position: absolute;
+    }
+
+    nav ul li svg {
+        position: absolute;
+        padding-top: 10px;
+    }
+
+    hr {
+        opacity: 50%;
+    }
+
+    .search input {
+        display: inline;
+        text-align: left;
+        width: 710px;
+        margin-left: 185px;
+        margin-top: 33px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #c3ccd9;
+    }
+
+    .search button {
+        margin-left: 880px;
+        margin-top: -40px;
+        position: absolute;
+        border: none;
+    }
+
+    .map {
+        align-items: center;
+        display: flex;
+        margin-left: 940px;
+        margin-top: -50px;
+    }
+
+    .map p {
+        padding-left: 10px;
+    }
 }
 
 .item-main {
@@ -14,183 +98,81 @@
     .item-main > section {
         flex-direction: row;
     }
-}
 
-header {
-  max-width: 1900px;
-  width: 100%;
-}
-header nav {
-  display: inline;
-  position: sticky;
-  max-width: 880px;
-  width: 80%;
-}
-header nav ul {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-  padding-top: 9px;
-  margin: 0 auto;
-  max-width: 800px;
-  width: 96%;
-  text-align: right;
-}
+    .categories-section {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10rem, 2fr));
+        margin-top: 35px;
+        margin-left: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+        height: 19cap;
+    }
+    .categories-section__vector {
+        color: #38bdf8;
+    }
 
+    .items-section {
+        display: flex;
+        justify-content: center;
 
+        h1,
+        p {
+            width: 30%;
+        }
 
-header nav ul .finn-logo {
-  display: block;
-  margin-left: -80px;
-  max-width: 200px;
-  width: 14%;
-  text-align: left;
-  padding: 8px;
-}
-header nav ul li {
-  display: flex;
-}
-header nav ul li a {
-  color: rgb(103, 103, 103);
-  padding: 14px 35px;
-  text-decoration: none;
-  font-family: "finn-default", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 75%;
-}
-header nav ul li:first-child {
-  text-align: left;
-}
-header nav ul li:nth-child(2) {
-  text-align: left;
-  margin-left: 20px;
-  position: absolute;
-}
+        .card {
+            padding: 40px;
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            align-content: center;
+            align-items: center;
+        }
 
-header nav ul li svg {
-    position: absolute;
-    padding-top: 10px;
-}
+        .card--image {
+            max-width: 240px;
+            width: 60%;
+            margin: 0 auto;
 
-header hr {
-  opacity: 50%;
-}
+            img {
+                max-width: 280px;
+                width: 100%;
+            }
+        }
 
-.search input {
-  display: inline;
-  text-align: left;
-  width: 710px;
-  margin-left: 185px;
-  margin-top: 33px;
-  padding: 15px;
-  border-radius: 5px;
-  border: 1px solid #c3ccd9;
-}
+        .card--title {
+            width: 40%;
+            &__location {
+                font-size: 10px;
+                padding-top: 20px;
+                margin-top: -40px;
+                margin-left: -30px;
+                display: flex;
+                justify-content: left;
+            }
+        }
+        .card--description {
+            width: 40%;
+            text-align: left;
+            padding-bottom: 60px;
+            width: 200px;
+            position: relative;
+            left: -40px;
+            top: -10px;
+        }
+    }
 
-.search button {
-    margin-left: 880px;
-    margin-top: -40px;
-    position: absolute;
-    border: none;
-}
+    .items-section p {
+        margin-right: 150px;
+        padding-top: 8px;
+    }
 
-.map {
-    align-items: center;
-    display: flex;
-    margin-left: 940px;
-    margin-top: -50px;
-}
-
-.map p {
-    padding-left: 10px;
-}
-
-
-
-.categories-section {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(10rem, 2fr));
-  margin-top: 35px;
-  margin-left: 40px;
-  padding-left: 100px;
-  padding-right: 100px;
-  height: 19cap;
-}
-.categories-section__vector {
-  color: #38bdf8;
-}
-
-
-.card {
-  padding: 40px;
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  align-content: center;
-  align-items: center;
-}
-
-.card--image {
-  width: 280px;
-  height: 280px;
-  margin: 0 auto;
-  position: relative; top: -20px; left: -20px;
-  display: flex;
-}
-
-.card--title {
-    &__location {
-        font-size: 10px;
-        padding-top: 20px;
-        margin-top: -40px;
-        margin-left: -30px;
+    .items-section--header {
         display: flex;
         justify-content: left;
+        margin-left: -180px;
     }
-}
-.card--description {
-        text-align: left;
-        padding-bottom: 60px;
-        width: 200px;
-        position: relative; left: -40px; top: -10px;
-    }
-
-
-.items-section p {
-  margin-right: 150px;
-}
-
-
-.styled {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-}
-
-.styled:hover {
-  background-color: rgba(0, 251, 255, 0.222);
-}
-
-.items-section--header {
-    display: flex;
-    justify-content: left;
-    margin-left: -180px;
-}
-
-
-.items-section p {
-  padding-top: 8px;
-}
-
-.items-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 // For screenshot 2, the login page.
@@ -198,7 +180,7 @@ header hr {
     flex-direction: row-reverse;
     justify-content: space-around;
     text-align: center;
-    
+
     .card {
         max-width: 600px;
         width: 40%;

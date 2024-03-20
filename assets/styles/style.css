@@ -158,27 +158,17 @@ header hr {
   margin-bottom: 10px;
 }
 
-.item-main {
-  flex-direction: column;
-  text-align: center;
-}
-.item-main .item-main > section {
-  flex-direction: row;
-}
-
-header {
+.item-header {
   max-width: 1900px;
   width: 100%;
 }
-
-header nav {
+.item-header nav {
   display: inline;
   position: sticky;
   max-width: 880px;
   width: 80%;
 }
-
-header nav ul {
+.item-header nav ul {
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -188,8 +178,7 @@ header nav ul {
   width: 96%;
   text-align: right;
 }
-
-header nav ul .finn-logo {
+.item-header nav ul .finn-logo {
   display: block;
   margin-left: -80px;
   max-width: 200px;
@@ -197,12 +186,10 @@ header nav ul .finn-logo {
   text-align: left;
   padding: 8px;
 }
-
-header nav ul li {
+.item-header nav ul li {
   display: flex;
 }
-
-header nav ul li a {
+.item-header nav ul li a {
   color: rgb(103, 103, 103);
   padding: 14px 35px;
   text-decoration: none;
@@ -210,27 +197,22 @@ header nav ul li a {
   font-weight: bold;
   font-size: 75%;
 }
-
-header nav ul li:first-child {
+.item-header nav ul li:first-child {
   text-align: left;
 }
-
-header nav ul li:nth-child(2) {
+.item-header nav ul li:nth-child(2) {
   text-align: left;
   margin-left: 20px;
   position: absolute;
 }
-
-header nav ul li svg {
+.item-header nav ul li svg {
   position: absolute;
   padding-top: 10px;
 }
-
-header hr {
+.item-header hr {
   opacity: 50%;
 }
-
-.search input {
+.item-header .search input {
   display: inline;
   text-align: left;
   width: 710px;
@@ -240,26 +222,30 @@ header hr {
   border-radius: 5px;
   border: 1px solid #c3ccd9;
 }
-
-.search button {
+.item-header .search button {
   margin-left: 880px;
   margin-top: -40px;
   position: absolute;
   border: none;
 }
-
-.map {
+.item-header .map {
   align-items: center;
   display: flex;
   margin-left: 940px;
   margin-top: -50px;
 }
-
-.map p {
+.item-header .map p {
   padding-left: 10px;
 }
 
-.categories-section {
+.item-main {
+  flex-direction: column;
+  text-align: center;
+}
+.item-main .item-main > section {
+  flex-direction: row;
+}
+.item-main .categories-section {
   display: grid;
   grid-template-columns: repeat(6, minmax(10rem, 2fr));
   margin-top: 35px;
@@ -268,12 +254,18 @@ header hr {
   padding-right: 100px;
   height: 19cap;
 }
-
-.categories-section__vector {
+.item-main .categories-section__vector {
   color: #38bdf8;
 }
-
-.card {
+.item-main .items-section {
+  display: flex;
+  justify-content: center;
+}
+.item-main .items-section h1,
+.item-main .items-section p {
+  width: 30%;
+}
+.item-main .items-section .card {
   padding: 40px;
   width: 200px;
   height: 200px;
@@ -281,18 +273,19 @@ header hr {
   align-content: center;
   align-items: center;
 }
-
-.card--image {
-  width: 280px;
-  height: 280px;
+.item-main .items-section .card--image {
+  max-width: 240px;
+  width: 60%;
   margin: 0 auto;
-  position: relative;
-  top: -20px;
-  left: -20px;
-  display: flex;
 }
-
-.card--title__location {
+.item-main .items-section .card--image img {
+  max-width: 280px;
+  width: 100%;
+}
+.item-main .items-section .card--title {
+  width: 40%;
+}
+.item-main .items-section .card--title__location {
   font-size: 10px;
   padding-top: 20px;
   margin-top: -40px;
@@ -300,8 +293,8 @@ header hr {
   display: flex;
   justify-content: left;
 }
-
-.card--description {
+.item-main .items-section .card--description {
+  width: 40%;
   text-align: left;
   padding-bottom: 60px;
   width: 200px;
@@ -309,40 +302,14 @@ header hr {
   left: -40px;
   top: -10px;
 }
-
-.items-section p {
+.item-main .items-section p {
   margin-right: 150px;
+  padding-top: 8px;
 }
-
-.styled {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-}
-
-.styled:hover {
-  background-color: rgba(0, 251, 255, 0.222);
-}
-
-.items-section--header {
+.item-main .items-section--header {
   display: flex;
   justify-content: left;
   margin-left: -180px;
-}
-
-.items-section p {
-  padding-top: 8px;
-}
-
-.items-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .login-main {
