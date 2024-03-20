@@ -1,12 +1,20 @@
-#Work report - Group 23
+# Work report - Group 23
 
-##Andreas (Screenshot 1 - Categories- & items-page)
+## Andreas (Screenshot 1 - Categories- & items-page)
+Work steps:
+1. Joined GitHub classrooms group 23.
+2. Tested GitHub, started structuring the item-page.
+3. Began working on demo page.
+4. Finished demo page with group, accepted pull requests.
+5. Started work on item-page/front-page.
+6. Moved CSS into SCSS.
+7. Continued work on item page.
+
+
+
+## Jon Petter (Screenshot 2 - Login-page)
 Work steps:
 
-
-
-##Jon Petter (Screenshot 2 - Login-page)
-Work steps:
 1. Created the group in GitHub classrooms and ensured both members joined it.
 2. Did some basic structure coding, printed the screenshots and drew the structural elements on them.
 3. Had Andreas look over them.
