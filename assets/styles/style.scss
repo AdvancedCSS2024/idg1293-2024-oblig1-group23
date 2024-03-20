@@ -2,7 +2,17 @@
 
 @use "common.scss";
 
-// For screenshot 1, the categories- and items- page.
+// Colors go here
+$finnBlue: #0063fb;
+$finnDimBlue: #f0f8fe;
+$finnButtonBlue: #0063fb;
+$finnCardBlue: #f1f9ff;
+$finnVectorBlue: #38bdf8;
+
+$finnBackgroundGrey: #f7f7f7;
+$finnBorderGrey: #c3ccd9;
+
+// For screenshot 1, the categories- and items-page.
 .item-main {
     flex-direction: column;
     text-align: center;
@@ -13,13 +23,75 @@
 }
 
 // For screenshot 2, the login page.
+.login-body {
+    background-color: $finnBackgroundGrey;
+}
+
 .login-main {
-    flex-direction: row-reverse;
-    justify-content: space-around;
     text-align: center;
-    
+    justify-content: space-around;
+}
+
+.login-section {
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 86%;
+
     .card {
-        max-width: 600px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 540px;
         width: 40%;
+    }
+
+    .login-card {
+        background-color: white;
+
+        .finn-logo, .schibsted-logo {
+            margin: 0 auto;
+            max-width: 100px;
+            width: 30%;
+
+            &__img {
+                margin: inherit;
+                max-width: 200px;
+                width: 50%;
+            }
+        }
+
+        h1, h2 {
+            margin: 0 auto;
+            text-align: center;
+            max-width: 540px;
+            width: 80%;
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                color: gray;
+                font-size: x-small;
+            }
+        }
+    }
+
+    .help-card {
+        background-color: $finnCardBlue;
+
+        .finn-smartphone {
+            margin: 0 auto;
+            max-width: 100px;
+            width: 30%;
+
+            &__img {
+                margin: inherit;
+                max-width: 200px;
+                width: 50%;
+            }
+        }
     }
 }
