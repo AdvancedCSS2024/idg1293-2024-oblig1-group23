@@ -16,7 +16,91 @@ $finnInputGray: #e8e8e8;
 
 // For screenshot 1, the categories- and items-page.
 .item-header {
+    max-width: 1900px;
+    width: 100%;
 
+    nav {
+        display: inline;
+        position: sticky;
+        max-width: 880px;
+        width: 80%;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding-top: 9px;
+        margin: 0 auto;
+        max-width: 800px;
+        width: 96%;
+        text-align: right;
+    }
+
+    nav ul .finn-logo {
+        display: block;
+        margin-left: -80px;
+        max-width: 200px;
+        width: 14%;
+        text-align: left;
+        padding: 8px;
+    }
+    nav ul li {
+        display: flex;
+    }
+    nav ul li a {
+        color: rgb(103, 103, 103);
+        padding: 14px 35px;
+        text-decoration: none;
+        font-family: "finn-default", Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 75%;
+    }
+    nav ul li:first-child {
+        text-align: left;
+    }
+    nav ul li:nth-child(2) {
+        text-align: left;
+        margin-left: 20px;
+        position: absolute;
+    }
+
+    nav ul li svg {
+        position: absolute;
+        padding-top: 10px;
+    }
+
+    hr {
+        opacity: 50%;
+    }
+
+    .search input {
+        display: inline;
+        text-align: left;
+        width: 710px;
+        margin-left: 185px;
+        margin-top: 33px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid #c3ccd9;
+    }
+
+    .search button {
+        margin-left: 880px;
+        margin-top: -40px;
+        position: absolute;
+        border: none;
+    }
+
+    .map {
+        align-items: center;
+        display: flex;
+        margin-left: 940px;
+        margin-top: -50px;
+    }
+
+    .map p {
+        padding-left: 10px;
+    }
 }
 
 .item-main {
