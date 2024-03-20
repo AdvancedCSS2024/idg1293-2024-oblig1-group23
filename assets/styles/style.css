@@ -165,12 +165,158 @@ header hr {
   margin-bottom: 10px;
 }
 
+.item-header {
+  max-width: 1900px;
+  width: 100%;
+}
+.item-header nav {
+  display: inline;
+  position: sticky;
+  max-width: 880px;
+  width: 80%;
+}
+.item-header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-top: 9px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 96%;
+  text-align: right;
+}
+.item-header nav ul .finn-logo {
+  display: block;
+  margin-left: -80px;
+  max-width: 200px;
+  width: 14%;
+  text-align: left;
+  padding: 8px;
+}
+.item-header nav ul li {
+  display: flex;
+}
+.item-header nav ul li a {
+  color: rgb(103, 103, 103);
+  padding: 14px 35px;
+  text-decoration: none;
+  font-family: "finn-default", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 75%;
+}
+.item-header nav ul li:first-child {
+  text-align: left;
+}
+.item-header nav ul li:nth-child(2) {
+  text-align: left;
+  margin-left: 20px;
+  position: absolute;
+}
+.item-header nav ul li svg {
+  position: absolute;
+  padding-top: 10px;
+}
+.item-header hr {
+  opacity: 50%;
+}
+.item-header .search input {
+  display: inline;
+  text-align: left;
+  width: 710px;
+  margin-left: 185px;
+  margin-top: 33px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #c3ccd9;
+}
+.item-header .search button {
+  margin-left: 880px;
+  margin-top: -40px;
+  position: absolute;
+  border: none;
+}
+.item-header .map {
+  align-items: center;
+  display: flex;
+  margin-left: 940px;
+  margin-top: -50px;
+}
+.item-header .map p {
+  padding-left: 10px;
+}
+
 .item-main {
   flex-direction: column;
   text-align: center;
 }
 .item-main .item-main > section {
   flex-direction: row;
+}
+.item-main .categories-section {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(10rem, 2fr));
+  margin-top: 35px;
+  margin-left: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  height: 19cap;
+}
+.item-main .categories-section__vector {
+  color: #38bdf8;
+}
+.item-main .items-section {
+  display: flex;
+  justify-content: center;
+}
+.item-main .items-section h1,
+.item-main .items-section p {
+  width: 30%;
+}
+.item-main .items-section .card {
+  padding: 40px;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  align-content: center;
+  align-items: center;
+}
+.item-main .items-section .card--image {
+  max-width: 240px;
+  width: 60%;
+  margin: 0 auto;
+}
+.item-main .items-section .card--image img {
+  max-width: 280px;
+  width: 100%;
+}
+.item-main .items-section .card--title {
+  width: 40%;
+}
+.item-main .items-section .card--title__location {
+  font-size: 10px;
+  padding-top: 20px;
+  margin-top: -40px;
+  margin-left: -30px;
+  display: flex;
+  justify-content: left;
+}
+.item-main .items-section .card--description {
+  width: 40%;
+  text-align: left;
+  padding-bottom: 60px;
+  width: 200px;
+  position: relative;
+  left: -40px;
+  top: -10px;
+}
+.item-main .items-section p {
+  margin-right: 150px;
+  padding-top: 8px;
+}
+.item-main .items-section--header {
+  display: flex;
+  justify-content: left;
+  margin-left: -180px;
 }
 
 .login-body {
