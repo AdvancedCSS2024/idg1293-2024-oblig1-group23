@@ -281,6 +281,7 @@ $finnInputGray: #e8e8e8;
 .login-main {
     text-align: center;
     justify-content: space-around;
+    padding-top: 20px;
 }
 
 .login-section {
@@ -290,127 +291,184 @@ $finnInputGray: #e8e8e8;
 
     .card {
         display: flex;
-        max-width: 540px;
-        width: 60%;
-        min-height: 400px;
+        max-width: 560px;
+        width: 40%;
+        min-height: 420px;
         padding: 50px 10px 50px 10px;
     }
 
     .login-card {
-        background-color: white;
-        box-shadow: 0 0 18px gray;
-        flex-direction: row;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
-        .finn-logo, .schibsted-logo {
-            max-width: 120px;
-            width: 40%;
-        }
-
-        .finn-logo {
-            margin: 0 auto;
-
-            &__img {
-                margin: inherit;
-                max-width: 100px;
-                width: 50%;
-            }
-        }
-
-        .schibsted-logo {
-            margin: 0 auto;
-
-            &__img {
-                margin: inherit;
-                max-width: 120px;
-                width: 100%;
-            }
-        }
-
-        h1, h2 {
-            margin: 0 auto;
-            text-align: left;
-            max-width: 400px;
-            width: 70%;
-            padding: 10px;
-        }
-
-        &__form {
-            box-shadow: none;
+        margin: 0 auto;
+        z-index: 8;
+        
+        // To implement the <a>-links at the bottom, we need an inner card inside a card.
+        &__inner {
+            background-color: white;
+            box-shadow: 0 0 22px gray;
+            border-radius: 10px;
             display: flex;
-            flex-direction: column;
-            max-width: 520px;
-            width: 80%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 560px;
+            width: 100%;
+            // ^ One clean way of doing layout is just doing "display: flex;"
+            //   with wrap. 100% width ensures the layout will wrap before placing the next elements;
+            //   the first of our four <a>-elements in this case.
+            min-height: 400px;
+            padding: 50px 5px 50px 5px;
+            z-index: 10;
 
-            input, button {
-                margin: 5px auto;
-                max-width: 520px;
-                width: 80%;
-                border-radius: 5px;
-                font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+            .finn-logo, .schibsted-logo {
+                max-width: 120px;
+                width: 40%;
+            }
+
+            .finn-logo {
+                margin: 0 auto;
+
+                &__img {
+                    margin: inherit;
+                    max-width: 100px;
+                    width: 50%;
+                }
+            }
+
+            .schibsted-logo {
+                margin: 0 auto;
+
+                &__img {
+                    margin: inherit;
+                    max-width: 120px;
+                    width: 100%;
+                }
+            }
+
+            h1, h2 {
+                margin: 0 auto;
+                text-align: left;
+                max-width: 400px;
+                width: 70%;
                 padding: 10px;
             }
 
-            label {
-                color: gray;
-                font-size: x-small;
-                margin: 5px auto;
-                max-width: 440px;
-                width: 85%;
-                text-align: left;
-            }
-
-            .email-input, .password-input {
-                background-color: $finnInputGray;
-
-                &:hover {
-                    background-color: $finnDarkerInputGray;
-                    -webkit-tap-highlight-color: transparent;
-                }
-            }
-
-            &__remember-input {
+            // Good BEM-example in the SCSS below,
+            // where .login-form is the block, and the .login-form__input
+            // and .login-form__buttonare the elements.
+            // There are also modifiers to these on
+            // the specific input-fields and buttons.
+            // The many nested levels save some code duplication.
+            // - Jon
+            .login-form {
+                box-shadow: none;
                 display: flex;
-                flex-direction: row;
-                justify-content: left;
-                margin: left;
-                max-width: 200px;
-                width: 60%;
+                flex-direction: column;
+                max-width: 520px;
+                width: 80%;
 
-                input {
-                    max-width: 20px;
-                    width: 20%;
-                    padding: 0;
+                &__input, &__button {
+                    margin: 5px auto;
+                    max-width: 520px;
+                    width: 80%;
+                    border-radius: 5px;
+                    font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+                    padding: 10px;
+
+                    &--email, &--password {
+                        background-color: $finnInputGray;
+        
+                        &:hover {
+                            background-color: $finnDarkerInputGray;
+                            -webkit-tap-highlight-color: transparent;
+                        }
+                    }
+
+                    &--remember {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: left;
+                        margin: left;
+                        max-width: 200px;
+                        width: 60%;
+        
+                        input {
+                            max-width: 20px;
+                            width: 20%;
+                            padding: 10px;
+                        }
+        
+                        p {
+                            font-size: small;
+                            max-width: 120px;
+                            width: 60%;
+                            padding: 0;
+                        }
+
+                        svg {
+                            // The colors should actually be the code below, but it's hard to get right.
+                            // background-color: gray;
+                            // color: white;
+
+                            margin: 0 auto;
+                            max-width: 20px;
+                            width: 20%;
+                            justify-self: right;
+
+                            svg path {
+                                fill: gray;
+                                stroke: white;
+                            }
+                        }
+                    }
+
+                    &--login {
+                        background-color: $finnButtonBlue;
+                        color: white;
+        
+                        &:hover {
+                            background-color: mediumblue;
+                        }
+                    }
+        
+                    &--create_account {
+                        background-color: white;
+                        color: $finnButtonBlue;
+                        border: none;
+        
+                        &:hover {
+                            background-color: $finnDimBlue;
+                            box-shadow: 0 1px 4px gray;
+                            border: 2px 0 gray;
+                        }
+                    }
                 }
 
-                p {
-                    font-size: small;
-                    max-width: 120px;
-                    width: 60%;
-                    padding: 0;
+                label {
+                    color: gray;
+                    font-size: x-small;
+                    margin: 5px auto;
+                    max-width: 440px;
+                    width: 85%;
+                    text-align: left;
                 }
             }
+        }
 
-            &__login-button {
-                background-color: $finnButtonBlue;
-                color: white;
+        a {
+            color: gray;
+            margin: 0 auto;
+            max-width: 120px;
+            width: 22%;
+            padding: 5px;
+            font-size: smaller;
+            text-align: center;
+            text-decoration: none;
 
-                &:hover {
-                    background-color: mediumblue;
-                }
-            }
-
-            &__create_account-button {
-                background-color: white;
-                color: $finnButtonBlue;
-                border: none;
-
-                &:hover {
-                    background-color: $finnDimBlue;
-                    box-shadow: 0 1px 4px gray;
-                    border: 2px 0 gray;
-                }
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -421,6 +479,7 @@ $finnInputGray: #e8e8e8;
         flex-direction: column;
         flex-wrap: nowrap;
         justify-content: space-around;
+        z-index: 9;
 
         .finn-smartphone {
             margin: 0 auto;
