@@ -130,48 +130,12 @@ header hr {
   border: 2px 0 gray;
 }
 
-.card {
-  border: solid 1px rgba(125, 125, 125, 0.3019607843);
-  border-radius: 10px;
-  padding: 40px;
-  width: 205px;
-  height: 205px;
-  margin: 10px;
-}
-
-.styled {
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
-  font-size: 1rem;
-  text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-}
-
-.styled:hover {
-  background-color: rgba(0, 251, 255, 0.222);
-}
-
-.items-section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.items-section p {
-  margin-left: 10px;
-  margin-bottom: 10px;
-}
-
 .item-header {
   max-width: 1900px;
   width: 100%;
 }
 .item-header nav {
   display: inline;
-  position: sticky;
   max-width: 880px;
   width: 80%;
 }
@@ -179,45 +143,54 @@ header hr {
   display: flex;
   flex-direction: row;
   list-style-type: none;
-  padding-top: 9px;
+  padding-top: 3px;
   margin: 0 auto;
   max-width: 800px;
   width: 96%;
-  text-align: right;
 }
 .item-header nav ul .finn-logo {
-  display: block;
-  margin-left: -80px;
-  max-width: 200px;
-  width: 14%;
-  text-align: left;
-  padding: 8px;
-}
-.item-header nav ul li {
   display: flex;
+  margin-left: -80px;
+  max-width: 300px;
+  width: 40%;
+  text-align: left;
 }
-.item-header nav ul li a {
+.item-header .finn-logo:hover {
+  border-bottom: #0063fb 2px solid;
+  margin-bottom: -2px;
+}
+.item-header .finn-logo figcaption {
   color: rgb(103, 103, 103);
-  padding: 14px 35px;
+  padding: 8px 15px;
   text-decoration: none;
   font-family: "finn-default", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 75%;
 }
-.item-header nav ul li:first-child {
-  text-align: left;
+.item-header nav ul li {
+  display: flex;
+  align-items: center;
 }
-.item-header nav ul li:nth-child(2) {
+.item-header nav ul li:hover {
+  border-bottom: #0063fb 2px solid;
+  margin-bottom: -2px;
+}
+.item-header nav ul li figcaption {
+  color: rgb(103, 103, 103);
+  padding: 0 35px;
+  text-decoration: none;
+  font-family: "finn-default", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 75%;
   text-align: left;
-  margin-left: 20px;
-  position: absolute;
 }
 .item-header nav ul li svg {
   position: absolute;
-  padding-top: 10px;
+  padding-top: 0px;
 }
 .item-header hr {
   opacity: 50%;
+  margin-top: 2px;
 }
 .item-header .search input {
   display: inline;
@@ -258,31 +231,46 @@ header hr {
   margin-top: 35px;
   margin-left: 40px;
   padding-left: 100px;
-  padding-right: 100px;
   height: 19cap;
 }
 .item-main .categories-section__vector {
   color: #38bdf8;
 }
+.item-main .categories-section p {
+  font-size: small;
+  color: gray;
+}
 .item-main .items-section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
+  width: 96%;
 }
-.item-main .items-section h1,
-.item-main .items-section p {
+.item-main .items-section__headline {
+  display: inline;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 90%;
+  text-align: left;
+}
+.item-main .items-section__headline h1, .item-main .items-section__headline p {
+  max-width: 800px;
   width: 30%;
+  display: inline;
+}
+.item-main .items-section__headline p {
+  font-size: small;
 }
 .item-main .items-section .card {
-  padding: 40px;
-  width: 200px;
-  height: 200px;
+  padding: 20px;
   display: inline-block;
   align-content: center;
   align-items: center;
 }
 .item-main .items-section .card--image {
-  max-width: 240px;
-  width: 60%;
+  max-width: 440px;
+  width: 100%;
   margin: 0 auto;
 }
 .item-main .items-section .card--image img {
@@ -294,29 +282,13 @@ header hr {
 }
 .item-main .items-section .card--title__location {
   font-size: 10px;
-  padding-top: 20px;
-  margin-top: -40px;
-  margin-left: -30px;
   display: flex;
   justify-content: left;
 }
 .item-main .items-section .card--description {
-  width: 40%;
+  width: 100%;
+  max-width: 1000px;
   text-align: left;
-  padding-bottom: 60px;
-  width: 200px;
-  position: relative;
-  left: -40px;
-  top: -10px;
-}
-.item-main .items-section p {
-  margin-right: 150px;
-  padding-top: 8px;
-}
-.item-main .items-section--header {
-  display: flex;
-  justify-content: left;
-  margin-left: -180px;
 }
 
 .login-body {
