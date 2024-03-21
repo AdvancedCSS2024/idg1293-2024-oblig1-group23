@@ -150,16 +150,18 @@ header hr {
 }
 .item-header nav ul .finn-logo {
   display: flex;
+  align-items: center;
   margin-left: -80px;
   max-width: 300px;
   width: 40%;
   text-align: left;
 }
-.item-header .finn-logo:hover {
+.item-header nav ul .finn-logo:hover {
   border-bottom: #0063fb 2px solid;
   margin-bottom: -2px;
+  cursor: pointer;
 }
-.item-header .finn-logo figcaption {
+.item-header nav ul .finn-logo p {
   color: rgb(103, 103, 103);
   padding: 8px 15px;
   text-decoration: none;
@@ -174,8 +176,9 @@ header hr {
 .item-header nav ul li:hover {
   border-bottom: #0063fb 2px solid;
   margin-bottom: -2px;
+  cursor: pointer;
 }
-.item-header nav ul li figcaption {
+.item-header nav ul li p {
   color: rgb(103, 103, 103);
   padding: 0 35px;
   text-decoration: none;
@@ -202,17 +205,36 @@ header hr {
   border-radius: 5px;
   border: 1px solid #c3ccd9;
 }
+.item-header .search input:hover {
+  border-color: gray;
+}
+.item-header .search input:focus {
+  outline-color: #38bdf8;
+}
+.item-header .search input::-moz-placeholder {
+  color: #c8c8c8;
+}
+.item-header .search input::placeholder {
+  color: #c8c8c8;
+}
 .item-header .search button {
   margin-left: 880px;
   margin-top: -40px;
   position: absolute;
   border: none;
 }
+.item-header .search button:hover {
+  cursor: pointer;
+}
 .item-header .map {
   align-items: center;
   display: flex;
   margin-left: 940px;
   margin-top: -50px;
+}
+.item-header .map:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 .item-header .map p {
   padding-left: 10px;
@@ -233,12 +255,22 @@ header hr {
   padding-left: 100px;
   height: 19cap;
 }
-.item-main .categories-section__vector {
-  color: #38bdf8;
-}
 .item-main .categories-section p {
   font-size: small;
   color: gray;
+}
+.item-main .categories-section__vector {
+  color: #38bdf8;
+}
+.item-main .categories-section__vector p {
+  color: black;
+}
+.item-main .categories-section__vector:hover {
+  color: gray;
+  cursor: pointer;
+}
+.item-main .categories-section__vector:hover p {
+  color: inherit;
 }
 .item-main .items-section {
   display: flex;
@@ -262,6 +294,15 @@ header hr {
 .item-main .items-section__headline p {
   font-size: small;
 }
+.item-main .items-section__headline p a {
+  text-decoration: none;
+}
+.item-main .items-section__headline p a:visited {
+  color: #0063fb;
+}
+.item-main .items-section__headline p a:hover {
+  text-decoration: underline;
+}
 .item-main .items-section .card {
   padding: 20px;
   display: inline-block;
@@ -276,6 +317,8 @@ header hr {
 .item-main .items-section .card--image img {
   max-width: 280px;
   width: 100%;
+  border: #c3ccd9 solid 1.5px;
+  border-radius: 10px;
 }
 .item-main .items-section .card--title {
   width: 40%;
@@ -289,6 +332,15 @@ header hr {
   width: 100%;
   max-width: 1000px;
   text-align: left;
+}
+.item-main .items-section i {
+  position: relative;
+  right: -115px;
+  top: 38px;
+  color: white;
+}
+.item-main .items-section i:hover {
+  color: #0063fb;
 }
 
 .login-body {

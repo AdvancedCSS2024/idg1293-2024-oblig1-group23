@@ -23,8 +23,8 @@ $finnInputGray: #e8e8e8;
         display: inline;
         max-width: 880px;
         width: 80%;
-    }
-    nav ul {
+    
+    & ul {
         display: flex;
         flex-direction: row;
         list-style-type: none;
@@ -32,29 +32,33 @@ $finnInputGray: #e8e8e8;
         margin: 0 auto;
         max-width: 800px;
         width: 96%;
-    }
+    } 
+}
 
     nav ul .finn-logo {
         display: flex;
+        align-items: center;
         margin-left: -80px;
         max-width: 300px;
         width: 40%;
         text-align: left;
+    
+
+        &:hover {
+            border-bottom: $finnButtonBlue 2px solid;
+            margin-bottom: -2px;
+            cursor: pointer;
     }
 
-    .finn-logo:hover {
-        border-bottom: $finnButtonBlue 2px solid;
-        margin-bottom: -2px;
-    }
-
-    .finn-logo figcaption {
-        color: rgb(103, 103, 103);
-        padding: 8px 15px;
-        text-decoration: none;
-        font-family: "finn-default", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 75%;
-    }
+        & p {
+            color: rgb(103, 103, 103);
+            padding: 8px 15px;
+            text-decoration: none;
+            font-family: "finn-default", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 75%;
+    } 
+}
 
     nav ul li {
         display: flex;
@@ -63,25 +67,27 @@ $finnInputGray: #e8e8e8;
         &:hover {
             border-bottom: $finnButtonBlue 2px solid;
             margin-bottom: -2px;
+            cursor: pointer;
         } 
-    }
-    nav ul li figcaption {
-        color: rgb(103, 103, 103);
-        padding: 0 35px;
-        text-decoration: none;
-        font-family: "finn-default", Arial, Helvetica, sans-serif;
-        font-weight: bold;
-        font-size: 75%;
-        text-align: left;
-    }
+    
+        & p {
+            color: rgb(103, 103, 103);
+            padding: 0 35px;
+            text-decoration: none;
+            font-family: "finn-default", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 75%;
+            text-align: left;
+    } 
+
    
 
-    nav ul li svg {
-        position: absolute;
-        padding-top: 0px;
+        & svg {
+            position: absolute;
+            padding-top: 0px;
     }
    
-
+}
 
     hr {
         opacity: 50%;
@@ -96,7 +102,20 @@ $finnInputGray: #e8e8e8;
         margin-top: 33px;
         padding: 15px;
         border-radius: 5px;
-        border: 1px solid #c3ccd9;
+        border: 1px solid $finnBorderGray;
+
+        &:hover {
+            border-color: gray;
+        }
+
+        &:focus {
+            outline-color: $finnVectorBlue;
+        } 
+        
+        &::placeholder {
+            color: $finnDarkerInputGray;
+        }
+
     }
 
     .search button {
@@ -104,19 +123,29 @@ $finnInputGray: #e8e8e8;
         margin-top: -40px;
         position: absolute;
         border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
+
 
     .map {
         align-items: center;
         display: flex;
         margin-left: 940px;
         margin-top: -50px;
-    }
 
-    .map p {
-        padding-left: 10px;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    
+
+        & p {
+            padding-left: 10px;
     }
-}
+} }
 
 .item-main {
     flex-direction: column;
@@ -133,15 +162,29 @@ $finnInputGray: #e8e8e8;
         margin-left: 40px;
         padding-left: 100px;
         height: 19cap;
+
+        & p {
+            font-size: small;
+            color: gray;
+        }
     }
     .categories-section__vector {
         color: #38bdf8;
+
+        & p {
+            color: black;
+        }
+
+        &:hover {
+            color: gray;
+            cursor: pointer;
+            & p {
+                color: inherit;
+            }
+        }
     }
 
-    .categories-section p {
-        font-size: small;
-        color: gray;
-    }
+ 
 
     .items-section {
         display: flex;
@@ -165,7 +208,20 @@ $finnInputGray: #e8e8e8;
 
             p {
                 font-size: small;
+
+                & a {
+                    text-decoration: none;
+                    
+                    &:visited {
+                        color: $finnBlue;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
             }
+  
         }
 
         .card {
@@ -179,10 +235,13 @@ $finnInputGray: #e8e8e8;
             max-width: 440px;
             width: 100%;
             margin: 0 auto;
+            
 
             img {
                 max-width: 280px;
                 width: 100%;
+                border: $finnBorderGray solid 1.5px;
+                border-radius: 10px;
             }
         }
 
@@ -199,7 +258,19 @@ $finnInputGray: #e8e8e8;
             max-width: 1000px;
             text-align: left;
         }
+
+        i {
+            position: relative; right: -115px; top: 38px;
+            color: white; 
+
+            &:hover {
+            color: $finnBlue;
+            }
+
+        }
+
     }
+    
 }
 
 // For screenshot 2, the login page.
