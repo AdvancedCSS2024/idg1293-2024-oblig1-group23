@@ -298,6 +298,7 @@ header hr {
 .login-main {
   text-align: center;
   justify-content: space-around;
+  padding-top: 20px;
 }
 
 .login-section {
@@ -307,53 +308,67 @@ header hr {
 }
 .login-section .card {
   display: flex;
-  max-width: 540px;
-  width: 60%;
-  min-height: 400px;
+  max-width: 560px;
+  width: 40%;
+  min-height: 420px;
   padding: 50px 10px 50px 10px;
 }
 .login-section .login-card {
-  background-color: white;
-  box-shadow: 0 0 18px gray;
-  flex-direction: row;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0 auto;
+  z-index: 8;
 }
-.login-section .login-card .finn-logo, .login-section .login-card .schibsted-logo {
+.login-section .login-card__inner {
+  background-color: white;
+  box-shadow: 0 0 22px gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 560px;
+  width: 100%;
+  min-height: 400px;
+  padding: 50px 5px 50px 5px;
+  z-index: 10;
+}
+.login-section .login-card__inner .finn-logo, .login-section .login-card__inner .schibsted-logo {
   max-width: 120px;
   width: 40%;
 }
-.login-section .login-card .finn-logo {
+.login-section .login-card__inner .finn-logo {
   margin: 0 auto;
 }
-.login-section .login-card .finn-logo__img {
+.login-section .login-card__inner .finn-logo__img {
   margin: inherit;
   max-width: 100px;
   width: 50%;
 }
-.login-section .login-card .schibsted-logo {
+.login-section .login-card__inner .schibsted-logo {
   margin: 0 auto;
 }
-.login-section .login-card .schibsted-logo__img {
+.login-section .login-card__inner .schibsted-logo__img {
   margin: inherit;
   max-width: 120px;
   width: 100%;
 }
-.login-section .login-card h1, .login-section .login-card h2 {
+.login-section .login-card__inner h1, .login-section .login-card__inner h2 {
   margin: 0 auto;
   text-align: left;
   max-width: 400px;
   width: 70%;
   padding: 10px;
 }
-.login-section .login-card__form {
+.login-section .login-card__inner .login-form {
   box-shadow: none;
   display: flex;
   flex-direction: column;
   max-width: 520px;
   width: 80%;
 }
-.login-section .login-card__form input, .login-section .login-card__form button {
+.login-section .login-card__inner .login-form__input, .login-section .login-card__inner .login-form__button {
   margin: 5px auto;
   max-width: 520px;
   width: 80%;
@@ -361,22 +376,14 @@ header hr {
   font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
   padding: 10px;
 }
-.login-section .login-card__form label {
-  color: gray;
-  font-size: x-small;
-  margin: 5px auto;
-  max-width: 440px;
-  width: 85%;
-  text-align: left;
-}
-.login-section .login-card__form .email-input, .login-section .login-card__form .password-input {
+.login-section .login-card__inner .login-form__input--email, .login-section .login-card__inner .login-form__input--password, .login-section .login-card__inner .login-form__button--email, .login-section .login-card__inner .login-form__button--password {
   background-color: #e8e8e8;
 }
-.login-section .login-card__form .email-input:hover, .login-section .login-card__form .password-input:hover {
+.login-section .login-card__inner .login-form__input--email:hover, .login-section .login-card__inner .login-form__input--password:hover, .login-section .login-card__inner .login-form__button--email:hover, .login-section .login-card__inner .login-form__button--password:hover {
   background-color: #c8c8c8;
   -webkit-tap-highlight-color: transparent;
 }
-.login-section .login-card__form__remember-input {
+.login-section .login-card__inner .login-form__input--remember, .login-section .login-card__inner .login-form__button--remember {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -384,33 +391,64 @@ header hr {
   max-width: 200px;
   width: 60%;
 }
-.login-section .login-card__form__remember-input input {
+.login-section .login-card__inner .login-form__input--remember input, .login-section .login-card__inner .login-form__button--remember input {
   max-width: 20px;
   width: 20%;
-  padding: 0;
+  padding: 10px;
 }
-.login-section .login-card__form__remember-input p {
+.login-section .login-card__inner .login-form__input--remember p, .login-section .login-card__inner .login-form__button--remember p {
   font-size: small;
   max-width: 120px;
   width: 60%;
   padding: 0;
 }
-.login-section .login-card__form__login-button {
+.login-section .login-card__inner .login-form__input--remember svg, .login-section .login-card__inner .login-form__button--remember svg {
+  margin: 0 auto;
+  max-width: 20px;
+  width: 20%;
+  justify-self: right;
+}
+.login-section .login-card__inner .login-form__input--remember svg svg path, .login-section .login-card__inner .login-form__button--remember svg svg path {
+  fill: gray;
+  stroke: white;
+}
+.login-section .login-card__inner .login-form__input--login, .login-section .login-card__inner .login-form__button--login {
   background-color: #0063fb;
   color: white;
 }
-.login-section .login-card__form__login-button:hover {
+.login-section .login-card__inner .login-form__input--login:hover, .login-section .login-card__inner .login-form__button--login:hover {
   background-color: mediumblue;
 }
-.login-section .login-card__form__create_account-button {
+.login-section .login-card__inner .login-form__input--create_account, .login-section .login-card__inner .login-form__button--create_account {
   background-color: white;
   color: #0063fb;
   border: none;
 }
-.login-section .login-card__form__create_account-button:hover {
+.login-section .login-card__inner .login-form__input--create_account:hover, .login-section .login-card__inner .login-form__button--create_account:hover {
   background-color: #f0f8fe;
   box-shadow: 0 1px 4px gray;
   border: 2px 0 gray;
+}
+.login-section .login-card__inner .login-form label {
+  color: gray;
+  font-size: x-small;
+  margin: 5px auto;
+  max-width: 440px;
+  width: 85%;
+  text-align: left;
+}
+.login-section .login-card a {
+  color: gray;
+  margin: 0 auto;
+  max-width: 120px;
+  width: 22%;
+  padding: 5px;
+  font-size: smaller;
+  text-align: center;
+  text-decoration: none;
+}
+.login-section .login-card a:hover {
+  text-decoration: underline;
 }
 .login-section .help-card {
   background-color: #f1f9ff;
@@ -418,6 +456,7 @@ header hr {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
+  z-index: 9;
 }
 .login-section .help-card .finn-smartphone {
   margin: 0 auto;
