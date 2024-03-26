@@ -1,1 +1,500 @@
 // USE THIS FILE TO CREATE THE LAYOUT AND SPECIFIC RULES FOR SCREENSHOTS 1 and 2
+
+@use "common.scss";
+
+// Colors go here
+$finnBlue: #0063fb;
+$finnDimBlue: #f0f8fe;
+$finnButtonBlue: #0063fb;
+$finnCardBlue: #f1f9ff;
+$finnVectorBlue: #38bdf8;
+
+$finnBackgroundGray: #f7f7f7;
+$finnBorderGray: #c3ccd9;
+$finnDarkerInputGray: #c8c8c8;
+$finnInputGray: #e8e8e8;
+
+// For screenshot 1, the categories- and items-page.
+.item-header {
+    max-width: 1900px;
+    width: 100%;
+
+    nav {
+        display: inline;
+        max-width: 880px;
+        width: 80%;
+    
+    & ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        padding-top: 3px;
+        margin: 0 auto;
+        max-width: 800px;
+        width: 96%;
+    } 
+}
+
+    nav ul .finn-logo {
+        display: flex;
+        align-items: center;
+        margin-left: -80px;
+        max-width: 300px;
+        width: 40%;
+        text-align: left;
+    
+
+        &:hover {
+            border-bottom: $finnButtonBlue 2px solid;
+            margin-bottom: -2px;
+            cursor: pointer;
+    }
+
+        & p {
+            color: rgb(103, 103, 103);
+            padding: 8px 15px;
+            text-decoration: none;
+            font-family: "finn-default", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 75%;
+    } 
+}
+
+    nav ul li {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            border-bottom: $finnButtonBlue 2px solid;
+            margin-bottom: -2px;
+            cursor: pointer;
+        } 
+    
+        & p {
+            color: rgb(103, 103, 103);
+            padding: 0 35px;
+            text-decoration: none;
+            font-family: "finn-default", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 75%;
+            text-align: left;
+    } 
+
+   
+
+        & svg {
+            position: absolute;
+            padding-top: 0px;
+    }
+   
+}
+
+    hr {
+        opacity: 50%;
+        margin-top: 2px;
+    }
+
+    .search input {
+        display: inline;
+        text-align: left;
+        width: 710px;
+        margin-left: 185px;
+        margin-top: 33px;
+        padding: 15px;
+        border-radius: 5px;
+        border: 1px solid $finnBorderGray;
+
+        &:hover {
+            border-color: gray;
+        }
+
+        &:focus {
+            outline-color: $finnVectorBlue;
+        } 
+        
+        &::placeholder {
+            color: $finnDarkerInputGray;
+        }
+
+    }
+
+    .search button {
+        margin-left: 880px;
+        margin-top: -40px;
+        position: absolute;
+        border: none;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+    .map {
+        align-items: center;
+        display: flex;
+        margin-left: 940px;
+        margin-top: -50px;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    
+
+        & p {
+            padding-left: 10px;
+    }
+} }
+
+.item-main {
+    flex-direction: column;
+    text-align: center;
+
+    .item-main > section {
+        flex-direction: row;
+    }
+
+    .categories-section {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(10rem, 2fr));
+        margin-top: 35px;
+        margin-left: 40px;
+        padding-left: 100px;
+        height: 19cap;
+
+        & p {
+            font-size: small;
+            color: gray;
+        }
+    }
+    .categories-section__vector {
+        color: #38bdf8;
+
+        & p {
+            color: black;
+        }
+
+        &:hover {
+            color: gray;
+            cursor: pointer;
+            & p {
+                color: inherit;
+            }
+        }
+    }
+
+ 
+
+    .items-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        width: 96%;
+
+        &__headline {
+            display: inline;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            width: 90%;
+            text-align: left;
+            
+            h1, p {
+                max-width: 800px;
+                width: 30%;
+                display: inline;
+            }
+
+            p {
+                font-size: small;
+
+                & a {
+                    text-decoration: none;
+                    
+                    &:visited {
+                        color: $finnBlue;
+                    }
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+  
+        }
+
+        .card {
+            padding: 20px;
+            display: inline-block;
+            align-content: center;
+            align-items: center;
+        }
+
+        .card--image {
+            max-width: 440px;
+            width: 100%;
+            margin: 0 auto;
+            
+
+            img {
+                max-width: 280px;
+                width: 100%;
+                border: $finnBorderGray solid 1.5px;
+                border-radius: 10px;
+            }
+        }
+
+        .card--title {
+            width: 40%;
+            &__location {
+                font-size: 10px;
+                display: flex;
+                justify-content: left;
+            }
+        }
+        .card--description {
+            width: 100%;
+            max-width: 1000px;
+            text-align: left;
+        }
+
+        i {
+            position: relative; right: -115px; top: 38px;
+            color: white; 
+
+            &:hover {
+            color: $finnBlue;
+            }
+
+        }
+
+    }
+    
+}
+
+// For screenshot 2, the login page.
+.login-body {
+    background-color: $finnBackgroundGray;
+}
+
+.login-main {
+    text-align: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.login-section {
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 86%;
+
+    .card {
+        display: flex;
+        max-width: 560px;
+        width: 40%;
+        min-height: 420px;
+        padding: 50px 10px 50px 10px;
+    }
+
+    .login-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        z-index: 8;
+        
+        // To implement the <a>-links at the bottom, we need an inner card inside a card.
+        &__inner {
+            background-color: white;
+            box-shadow: 0 0 22px gray;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            max-width: 560px;
+            width: 100%;
+            // ^ One clean way of doing layout is just doing "display: flex;"
+            //   with wrap. 100% width ensures the layout will wrap before placing the next elements;
+            //   the first of our four <a>-elements in this case.
+            min-height: 400px;
+            padding: 50px 5px 50px 5px;
+            z-index: 10;
+
+            .finn-logo, .schibsted-logo {
+                max-width: 120px;
+                width: 40%;
+            }
+
+            .finn-logo {
+                margin: 0 auto;
+
+                &__img {
+                    margin: inherit;
+                    max-width: 100px;
+                    width: 50%;
+                }
+            }
+
+            .schibsted-logo {
+                margin: 0 auto;
+
+                &__img {
+                    margin: inherit;
+                    max-width: 120px;
+                    width: 100%;
+                }
+            }
+
+            h1, h2 {
+                margin: 0 auto;
+                text-align: left;
+                max-width: 400px;
+                width: 70%;
+                padding: 10px;
+            }
+
+            // Good BEM-example in the SCSS below,
+            // where .login-form is the block, and the .login-form__input
+            // and .login-form__buttonare the elements.
+            // There are also modifiers to these on
+            // the specific input-fields and buttons.
+            // The many nested levels save some code duplication.
+            // - Jon
+            .login-form {
+                box-shadow: none;
+                display: flex;
+                flex-direction: column;
+                max-width: 520px;
+                width: 80%;
+
+                &__input, &__button {
+                    margin: 5px auto;
+                    max-width: 520px;
+                    width: 80%;
+                    border-radius: 5px;
+                    font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+                    padding: 10px;
+
+                    &--email, &--password {
+                        background-color: $finnInputGray;
+        
+                        &:hover {
+                            background-color: $finnDarkerInputGray;
+                            -webkit-tap-highlight-color: transparent;
+                        }
+                    }
+
+                    &--remember {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: left;
+                        margin: left;
+                        max-width: 200px;
+                        width: 60%;
+        
+                        input {
+                            max-width: 20px;
+                            width: 20%;
+                            padding: 10px;
+                        }
+        
+                        p {
+                            font-size: small;
+                            max-width: 120px;
+                            width: 60%;
+                            padding: 0;
+                        }
+
+                        svg {
+                            // The colors should actually be the code below, but it's hard to get right.
+                            // background-color: gray;
+                            // color: white;
+
+                            margin: 0 auto;
+                            max-width: 20px;
+                            width: 20%;
+                            justify-self: right;
+
+                            svg path {
+                                fill: gray;
+                                stroke: white;
+                            }
+                        }
+                    }
+
+                    &--login {
+                        background-color: $finnButtonBlue;
+                        color: white;
+        
+                        &:hover {
+                            background-color: mediumblue;
+                        }
+                    }
+        
+                    &--create_account {
+                        background-color: white;
+                        color: $finnButtonBlue;
+                        border: none;
+        
+                        &:hover {
+                            background-color: $finnDimBlue;
+                            box-shadow: 0 1px 4px gray;
+                            border: 2px 0 gray;
+                        }
+                    }
+                }
+
+                label {
+                    color: gray;
+                    font-size: x-small;
+                    margin: 5px auto;
+                    max-width: 440px;
+                    width: 85%;
+                    text-align: left;
+                }
+            }
+        }
+
+        a {
+            color: gray;
+            margin: 0 auto;
+            max-width: 120px;
+            width: 22%;
+            padding: 5px;
+            font-size: smaller;
+            text-align: center;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .help-card {
+        background-color: $finnCardBlue;
+        border: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        z-index: 9;
+
+        .finn-smartphone {
+            margin: 0 auto;
+            max-width: 160px;
+            width: 40%;
+
+            &__img {
+                margin: inherit;
+                max-width: 200px;
+                width: 50%;
+            }
+        }
+
+        p, a {
+            padding: 2px 4px 2px 4px;
+        }
+    }
+}

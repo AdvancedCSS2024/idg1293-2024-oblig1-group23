@@ -1,0 +1,175 @@
+// YOU MUST USE BEM HERE
+// IMPLEMENT ALL THE RULES RELATED TO THE COMPONENTS THAT ARE PART OF YOUR DESIGN SYSTEM HERE 
+// Example: input, button, card ...
+
+@font-face {
+    font-family: "finn-default";
+    src: url("https://assets.finn.no/pkg/@warp-ds/fonts/v1/FINNTypeStrippet-Light.woff2");
+}
+
+@font-face {
+    font-family: "finn-medium";
+    src: url("https://assets.finn.no/pkg/@warp-ds/fonts/v1/FINNTypeStrippet-Medium.woff2");
+}
+
+// Colors go here
+$finnBlue: #0063fb;
+$finnDimBlue: #f0f8fe;
+$finnButtonBlue: #0063fb;
+$finnCardBlue: #f1f9ff;
+$finnVectorBlue: #38bdf8;
+
+$finnBackgroundGray: #f7f7f7;
+$finnBorderGray: #c3ccd9;
+$finnDarkerInputGray: #c8c8c8;
+$finnInputGray: #e8e8e8;
+
+body {
+    font-family: 'finn-default', Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+main, section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    padding-bottom: 20px;
+    // padding-left: 150px;
+    // padding-right: 150px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+header {
+    max-width: 900px;
+    width: 96%;
+    
+    nav {
+        display: inline;
+
+        position: -webkit-sticky;
+        position: sticky;
+
+        max-width: 880px;
+        width: 80%;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            padding-top: 9px;
+            margin: 0 auto;
+            max-width: 800px;
+            width: 96%;
+            text-align: right;
+
+            .finn-logo {
+                display: block;
+                margin: 0 auto;
+                max-width: 200px;
+                width: 14%;
+                text-align: left;
+                padding-top: 8px;
+            }
+
+            li {
+                display: inline;
+            }
+        
+            li a {
+                color: rgb(103, 103, 103);
+                padding: 14px 16px;
+                text-decoration: none;
+                font-family: "finn-default", Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                font-size: 75%;
+            }
+        
+            li:first-child {
+                text-align: left;
+            }
+        
+            li:nth-child(2) {
+                text-align: left;
+                padding-top: 3px;
+            }
+        }
+    }
+
+    hr {
+        opacity: calc(50%);
+    }
+}
+
+.search {
+
+    input {
+        display: block;
+        text-align: left;
+        width: 48%;
+        margin-left: 285px;
+        margin-top: 33px;
+        padding: 15px;
+        border-radius: 5px;
+
+        border: 1px solid $finnBorderGray; 
+    }
+}
+
+.categories-section {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(10rem,2fr));
+    margin-top: 35px;
+    margin-left: 40px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 19cap;
+
+    &__vector {
+        color: $finnVectorBlue;
+    }
+}
+
+.index-body {
+    margin: 0 auto;
+    
+    h1 {
+        text-align: center;
+    }
+
+    .index-nav {
+        background-color: $finnBorderGray;
+
+        .index-list {
+            display: flex;
+            flex-direction: column;
+
+            .index-list__element {
+                padding: 10px;
+
+                .index-list__link {
+                    &--items, &--login, &--demo {
+                        background-color: $finnButtonBlue;
+                        color: white;
+                        border-radius: 7px;
+
+                        &:hover {
+                            background-color: white;
+                            color: $finnButtonBlue;
+                            box-shadow: 0 1px 4px gray;
+                            border: 2px 0 gray;
+                        }
+                    }
+                }
+            }  
+        }
+    }
+}

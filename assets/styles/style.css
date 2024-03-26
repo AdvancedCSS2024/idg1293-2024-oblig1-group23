@@ -1,0 +1,525 @@
+@font-face {
+  font-family: "finn-default";
+  src: url("https://assets.finn.no/pkg/@warp-ds/fonts/v1/FINNTypeStrippet-Light.woff2");
+}
+@font-face {
+  font-family: "finn-medium";
+  src: url("https://assets.finn.no/pkg/@warp-ds/fonts/v1/FINNTypeStrippet-Medium.woff2");
+}
+body {
+  font-family: "finn-default", Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+}
+
+main, section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  padding-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+header {
+  max-width: 900px;
+  width: 96%;
+}
+header nav {
+  display: inline;
+  position: sticky;
+  max-width: 880px;
+  width: 80%;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-top: 9px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 96%;
+  text-align: right;
+}
+header nav ul .finn-logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 200px;
+  width: 14%;
+  text-align: left;
+  padding-top: 8px;
+}
+header nav ul li {
+  display: inline;
+}
+header nav ul li a {
+  color: rgb(103, 103, 103);
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "finn-default", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 75%;
+}
+header nav ul li:first-child {
+  text-align: left;
+}
+header nav ul li:nth-child(2) {
+  text-align: left;
+  padding-top: 3px;
+}
+header hr {
+  opacity: 50%;
+}
+
+.search input {
+  display: block;
+  text-align: left;
+  width: 48%;
+  margin-left: 285px;
+  margin-top: 33px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #c3ccd9;
+}
+
+.categories-section {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(10rem, 2fr));
+  margin-top: 35px;
+  margin-left: 40px;
+  padding-left: 200px;
+  padding-right: 200px;
+  height: 19cap;
+}
+.categories-section__vector {
+  color: #38bdf8;
+}
+
+.index-body {
+  margin: 0 auto;
+}
+.index-body h1 {
+  text-align: center;
+}
+.index-body .index-nav {
+  background-color: #c3ccd9;
+}
+.index-body .index-nav .index-list {
+  display: flex;
+  flex-direction: column;
+}
+.index-body .index-nav .index-list .index-list__element {
+  padding: 10px;
+}
+.index-body .index-nav .index-list .index-list__element .index-list__link--items, .index-body .index-nav .index-list .index-list__element .index-list__link--login, .index-body .index-nav .index-list .index-list__element .index-list__link--demo {
+  background-color: #0063fb;
+  color: white;
+  border-radius: 7px;
+}
+.index-body .index-nav .index-list .index-list__element .index-list__link--items:hover, .index-body .index-nav .index-list .index-list__element .index-list__link--login:hover, .index-body .index-nav .index-list .index-list__element .index-list__link--demo:hover {
+  background-color: white;
+  color: #0063fb;
+  box-shadow: 0 1px 4px gray;
+  border: 2px 0 gray;
+}
+
+.item-header {
+  max-width: 1900px;
+  width: 100%;
+}
+.item-header nav {
+  display: inline;
+  max-width: 880px;
+  width: 80%;
+}
+.item-header nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  padding-top: 3px;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 96%;
+}
+.item-header nav ul .finn-logo {
+  display: flex;
+  align-items: center;
+  margin-left: -80px;
+  max-width: 300px;
+  width: 40%;
+  text-align: left;
+}
+.item-header nav ul .finn-logo:hover {
+  border-bottom: #0063fb 2px solid;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.item-header nav ul .finn-logo p {
+  color: rgb(103, 103, 103);
+  padding: 8px 15px;
+  text-decoration: none;
+  font-family: "finn-default", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 75%;
+}
+.item-header nav ul li {
+  display: flex;
+  align-items: center;
+}
+.item-header nav ul li:hover {
+  border-bottom: #0063fb 2px solid;
+  margin-bottom: -2px;
+  cursor: pointer;
+}
+.item-header nav ul li p {
+  color: rgb(103, 103, 103);
+  padding: 0 35px;
+  text-decoration: none;
+  font-family: "finn-default", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 75%;
+  text-align: left;
+}
+.item-header nav ul li svg {
+  position: absolute;
+  padding-top: 0px;
+}
+.item-header hr {
+  opacity: 50%;
+  margin-top: 2px;
+}
+.item-header .search input {
+  display: inline;
+  text-align: left;
+  width: 710px;
+  margin-left: 185px;
+  margin-top: 33px;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #c3ccd9;
+}
+.item-header .search input:hover {
+  border-color: gray;
+}
+.item-header .search input:focus {
+  outline-color: #38bdf8;
+}
+.item-header .search input::-moz-placeholder {
+  color: #c8c8c8;
+}
+.item-header .search input::placeholder {
+  color: #c8c8c8;
+}
+.item-header .search button {
+  margin-left: 880px;
+  margin-top: -40px;
+  position: absolute;
+  border: none;
+}
+.item-header .search button:hover {
+  cursor: pointer;
+}
+.item-header .map {
+  align-items: center;
+  display: flex;
+  margin-left: 940px;
+  margin-top: -50px;
+}
+.item-header .map:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.item-header .map p {
+  padding-left: 10px;
+}
+
+.item-main {
+  flex-direction: column;
+  text-align: center;
+}
+.item-main .item-main > section {
+  flex-direction: row;
+}
+.item-main .categories-section {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(10rem, 2fr));
+  margin-top: 35px;
+  margin-left: 40px;
+  padding-left: 100px;
+  height: 19cap;
+}
+.item-main .categories-section p {
+  font-size: small;
+  color: gray;
+}
+.item-main .categories-section__vector {
+  color: #38bdf8;
+}
+.item-main .categories-section__vector p {
+  color: black;
+}
+.item-main .categories-section__vector:hover {
+  color: gray;
+  cursor: pointer;
+}
+.item-main .categories-section__vector:hover p {
+  color: inherit;
+}
+.item-main .items-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 96%;
+}
+.item-main .items-section__headline {
+  display: inline;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  width: 90%;
+  text-align: left;
+}
+.item-main .items-section__headline h1, .item-main .items-section__headline p {
+  max-width: 800px;
+  width: 30%;
+  display: inline;
+}
+.item-main .items-section__headline p {
+  font-size: small;
+}
+.item-main .items-section__headline p a {
+  text-decoration: none;
+}
+.item-main .items-section__headline p a:visited {
+  color: #0063fb;
+}
+.item-main .items-section__headline p a:hover {
+  text-decoration: underline;
+}
+.item-main .items-section .card {
+  padding: 20px;
+  display: inline-block;
+  align-content: center;
+  align-items: center;
+}
+.item-main .items-section .card--image {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+.item-main .items-section .card--image img {
+  max-width: 280px;
+  width: 100%;
+  border: #c3ccd9 solid 1.5px;
+  border-radius: 10px;
+}
+.item-main .items-section .card--title {
+  width: 40%;
+}
+.item-main .items-section .card--title__location {
+  font-size: 10px;
+  display: flex;
+  justify-content: left;
+}
+.item-main .items-section .card--description {
+  width: 100%;
+  max-width: 1000px;
+  text-align: left;
+}
+.item-main .items-section i {
+  position: relative;
+  right: -115px;
+  top: 38px;
+  color: white;
+}
+.item-main .items-section i:hover {
+  color: #0063fb;
+}
+
+.login-body {
+  background-color: #f7f7f7;
+}
+
+.login-main {
+  text-align: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.login-section {
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 86%;
+}
+.login-section .card {
+  display: flex;
+  max-width: 560px;
+  width: 40%;
+  min-height: 420px;
+  padding: 50px 10px 50px 10px;
+}
+.login-section .login-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 8;
+}
+.login-section .login-card__inner {
+  background-color: white;
+  box-shadow: 0 0 22px gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 560px;
+  width: 100%;
+  min-height: 400px;
+  padding: 50px 5px 50px 5px;
+  z-index: 10;
+}
+.login-section .login-card__inner .finn-logo, .login-section .login-card__inner .schibsted-logo {
+  max-width: 120px;
+  width: 40%;
+}
+.login-section .login-card__inner .finn-logo {
+  margin: 0 auto;
+}
+.login-section .login-card__inner .finn-logo__img {
+  margin: inherit;
+  max-width: 100px;
+  width: 50%;
+}
+.login-section .login-card__inner .schibsted-logo {
+  margin: 0 auto;
+}
+.login-section .login-card__inner .schibsted-logo__img {
+  margin: inherit;
+  max-width: 120px;
+  width: 100%;
+}
+.login-section .login-card__inner h1, .login-section .login-card__inner h2 {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 400px;
+  width: 70%;
+  padding: 10px;
+}
+.login-section .login-card__inner .login-form {
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+  width: 80%;
+}
+.login-section .login-card__inner .login-form__input, .login-section .login-card__inner .login-form__button {
+  margin: 5px auto;
+  max-width: 520px;
+  width: 80%;
+  border-radius: 5px;
+  font-family: "finn-medium", "finn-default", Arial, Helvetica, sans-serif;
+  padding: 10px;
+}
+.login-section .login-card__inner .login-form__input--email, .login-section .login-card__inner .login-form__input--password, .login-section .login-card__inner .login-form__button--email, .login-section .login-card__inner .login-form__button--password {
+  background-color: #e8e8e8;
+}
+.login-section .login-card__inner .login-form__input--email:hover, .login-section .login-card__inner .login-form__input--password:hover, .login-section .login-card__inner .login-form__button--email:hover, .login-section .login-card__inner .login-form__button--password:hover {
+  background-color: #c8c8c8;
+  -webkit-tap-highlight-color: transparent;
+}
+.login-section .login-card__inner .login-form__input--remember, .login-section .login-card__inner .login-form__button--remember {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  margin: left;
+  max-width: 200px;
+  width: 60%;
+}
+.login-section .login-card__inner .login-form__input--remember input, .login-section .login-card__inner .login-form__button--remember input {
+  max-width: 20px;
+  width: 20%;
+  padding: 10px;
+}
+.login-section .login-card__inner .login-form__input--remember p, .login-section .login-card__inner .login-form__button--remember p {
+  font-size: small;
+  max-width: 120px;
+  width: 60%;
+  padding: 0;
+}
+.login-section .login-card__inner .login-form__input--remember svg, .login-section .login-card__inner .login-form__button--remember svg {
+  margin: 0 auto;
+  max-width: 20px;
+  width: 20%;
+  justify-self: right;
+}
+.login-section .login-card__inner .login-form__input--remember svg svg path, .login-section .login-card__inner .login-form__button--remember svg svg path {
+  fill: gray;
+  stroke: white;
+}
+.login-section .login-card__inner .login-form__input--login, .login-section .login-card__inner .login-form__button--login {
+  background-color: #0063fb;
+  color: white;
+}
+.login-section .login-card__inner .login-form__input--login:hover, .login-section .login-card__inner .login-form__button--login:hover {
+  background-color: mediumblue;
+}
+.login-section .login-card__inner .login-form__input--create_account, .login-section .login-card__inner .login-form__button--create_account {
+  background-color: white;
+  color: #0063fb;
+  border: none;
+}
+.login-section .login-card__inner .login-form__input--create_account:hover, .login-section .login-card__inner .login-form__button--create_account:hover {
+  background-color: #f0f8fe;
+  box-shadow: 0 1px 4px gray;
+  border: 2px 0 gray;
+}
+.login-section .login-card__inner .login-form label {
+  color: gray;
+  font-size: x-small;
+  margin: 5px auto;
+  max-width: 440px;
+  width: 85%;
+  text-align: left;
+}
+.login-section .login-card a {
+  color: gray;
+  margin: 0 auto;
+  max-width: 120px;
+  width: 22%;
+  padding: 5px;
+  font-size: smaller;
+  text-align: center;
+  text-decoration: none;
+}
+.login-section .login-card a:hover {
+  text-decoration: underline;
+}
+.login-section .help-card {
+  background-color: #f1f9ff;
+  border: none;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  z-index: 9;
+}
+.login-section .help-card .finn-smartphone {
+  margin: 0 auto;
+  max-width: 160px;
+  width: 40%;
+}
+.login-section .help-card .finn-smartphone__img {
+  margin: inherit;
+  max-width: 200px;
+  width: 50%;
+}
+.login-section .help-card p, .login-section .help-card a {
+  padding: 2px 4px 2px 4px;
+}/*# sourceMappingURL=style.css.map */
